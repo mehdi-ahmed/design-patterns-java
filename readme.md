@@ -43,7 +43,13 @@
   Just for simplicity of coding, I have create it as nested class. 
   If you have a lot of POJO and their builder classes, then it’s best strategy to have a package itself for builder classes. 
   For example com.mytutos.pojo for POJOs and com.mytutos.builders for Builder classes. 
-  However note that in this case, **POJO classes constructor can’t be private** and can be instantiate directly.                                           
+  However note that in this case, **POJO classes constructor can’t be private** and can be 
+  instantiate directly.       
+  
+  
+  - Q2: What are the drawbacks of Builder pattern
+  
+  - Code redundancy and no reusability : If you change the POJO you'll need to change the Builder.                              
                                                       
    ---------------------------------------------------------------------------------------                                                   
 * Singleton                                                       
