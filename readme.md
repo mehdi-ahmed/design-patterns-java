@@ -1,5 +1,9 @@
 * Builder   
 
+    - Builders are often used together with fluent APIs or small, domain specific languages (DSLs) 
+    to create immutable objects without “telescoping” constructors (a telescoping constructor occurs when the 
+    increase of object constructor parameter combination leads to an exponential list of overloaded constructors). 
+
     - Builders eliminates a need in a long constructor, Which is helpful when there are a lot 
     of different optional values.
     
