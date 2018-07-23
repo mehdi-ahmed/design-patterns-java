@@ -1,4 +1,4 @@
-package Singleton;
+package Singleton.enumexample;
 
 
 /**
@@ -11,7 +11,7 @@ package Singleton;
 
 public class ClassSingleton {
 
-    private static ClassSingleton INSTANCE;
+    private static ClassSingleton INSTANCE = null;
     private String info = "Initial info class classic approach";
 
     private ClassSingleton() {

@@ -59,10 +59,66 @@
                                                    
 * **Singleton**
 
+    * Real life cases:
+        - Hibernate Session Factory(Expensive instance containing pooling, caching, dialects..you don't want many instances)
+        - Logging
+        - Caching
+        - Using Spring Beans scope by default is singleton.
+    
+    * Steps    :
+
+    - 1 - Override the **private constructor** to avoid any new object creation with new operator.
+    - 2 - Declare a **private static instance of the same class**
+    - 3 - Provide a **public static method** that will return the singleton class instance variable. 
+    If the variable is not initialized then initialize it or else simply return the instance variable.
+
     - In the ClassSingleton example, In the above code, getInstance() method is not thread safe. 
      Multiple threads can access it at the same time and for the first few threads when the instance variable is not initialized, 
      multiple threads can enters the if loop and create multiple instances and break our singleton implementation.        
      ==> **can be problematic in a multithreading**  
      
     - This approach has **serialization and thread-safety guaranteed by the enum implementation itself**, which ensures 
-    internally that only the single instance is available, correcting the problems pointed out on the class-based implementation.                                           
+    internally that only the single instance is available, correcting the problems pointed out on the class-based implementation.    
+    
+            - There are three ways through which we can achieve thread safety:
+            
+            1 - Create the instance variable at the time of class loading.
+            
+                Pros:
+            
+                 Thread safety without synchronization
+                 Easy to implement
+            
+                Cons:
+            
+                Early creation of resource that might not be used in the application.
+                The client application can’t pass any argument, so we can’t reuse it. For example, having a generic singleton 
+                class for database connection where client application supplies database server properties.
+                
+                
+            2 - Synchronize the getInstance() method
+                
+                Pros:
+                
+                    Thread safety is guaranteed.
+                    Client application can pass parameters
+                    Lazy initialization achieved
+                
+                Cons:
+                
+                    Slow performance because of locking overhead.
+                    Unnecessary synchronization that is not required once the instance variable is initialized.
+                    
+            3 -  Use synchronized block inside the if loop and volatile variable (BEST)
+             
+              Pros:
+              
+                Thread safety is guaranteed
+                Client application can pass arguments
+                Lazy initialization achieved
+                Synchronization overhead is minimal and applicable only for first few threads when the variable is null.
+              
+              Cons:
+              
+                Extra if condition
+                                               

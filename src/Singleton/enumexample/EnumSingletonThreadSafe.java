@@ -1,4 +1,4 @@
-package Singleton;
+package Singleton.enumexample;
 
 public enum EnumSingletonThreadSafe {
 
