@@ -1,4 +1,4 @@
-* Builder   
+* **Builder**   
 
     - Builders are often used together with fluent APIs or small, domain specific languages (DSLs) 
     to create immutable objects without “telescoping” constructors (a telescoping constructor occurs when the 
@@ -55,5 +55,14 @@
   
   - Code redundancy and no reusability : If you change the POJO you'll need to change the Builder.                              
                                                       
-   ---------------------------------------------------------------------------------------                                                   
-* Singleton                                                       
+   -----------------*********************************----------------------------------------------------------------------   
+                                                   
+* **Singleton**
+
+    - In the ClassSingleton example, In the above code, getInstance() method is not thread safe. 
+     Multiple threads can access it at the same time and for the first few threads when the instance variable is not initialized, 
+     multiple threads can enters the if loop and create multiple instances and break our singleton implementation.        
+     ==> **can be problematic in a multithreading**  
+     
+    - This approach has **serialization and thread-safety guaranteed by the enum implementation itself**, which ensures 
+    internally that only the single instance is available, correcting the problems pointed out on the class-based implementation.                                           

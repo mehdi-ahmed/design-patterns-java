@@ -7,14 +7,14 @@ package Singleton;
  * A static field containing its only instance
  * A static factory method for obtaining the instance
  */
+
+
 public class ClassSingleton {
 
-
     private static ClassSingleton INSTANCE;
-    private String info = "Initial info class";
+    private String info = "Initial info class classic approach";
 
     private ClassSingleton() {
-
     }
 
     public static ClassSingleton getInstance() {
@@ -26,5 +26,11 @@ public class ClassSingleton {
 
     //Getters and Setters
 
+    public String getInfo() {
+        return info;
+    }
 
+    public void setInfo(String info) {
+        this.info = info;
+    }
 }
