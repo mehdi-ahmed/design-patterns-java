@@ -121,4 +121,26 @@
               Cons:
               
                 Extra if condition
-                                               
+
+------------------------------------------------------***************___________________________----------------------------------------
+
+* **Factory**
+    - Factory design pattern is used when we have a super class with multiple sub-classes and based on input, 
+    we need to return one of the sub-class. This pattern take out the responsibility of instantiation of a class from 
+    client program to the factory class.
+    
+    - See diagram one (before Factory) : This is bad because your classes are closely coupled : 
+    If you want to add another argument to PC, you client class will have to change
+    - There is no abstraction : Client is aware of all instances of Server/PC
+    - Client has to do a lot of work to instantiate eveything
+    ==> Solution : Factory
+    
+    - Benefits of Factory:
+        - Abstraction
+        - Loose coupling
+        - Easy to extend
+
+        - JDK Examples: Calendar : createCalendar
+                
+
+              
