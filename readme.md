@@ -142,5 +142,18 @@
 
         - JDK Examples: Calendar : createCalendar
                 
+                
+   - According to the Gang of Four book that defined the technique, the intent of the Factory Method pattern is as follows:
+     
+    - Define an interface for creating an object, but let subclasses decide which class to instantiate. 
+    Factory Method lets a class defer instantiation to subclasses.
 
-              
+   - a Factory Method involves more than just a single method. Instead, it involves creating two sets of interfaces: 
+   (1) the product interface that constitutes the object to be created and 
+   (2) the creator interface that constitutes the object that will instantiate the product. 
+   
+   - Using the general pattern, we build a **Creator interface**, which includes one or more Factory Methods, 
+   as well as any number of other methods. This interface may also be an abstract class with defined methods 
+   or even a default implementation of the Factory Method that returns a default instance of Product . 
+   From this interface, a set of ConcreteCreator classes are created that return desired 
+   ConcreteProduct instances that implement the Product interface.     
