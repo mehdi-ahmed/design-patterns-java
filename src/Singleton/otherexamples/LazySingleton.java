@@ -10,7 +10,7 @@ public class LazySingleton {
     private LazySingleton() {
     }
 
-    //This method is not threadsafe
+    //This methodfactory is not threadsafe
     public static LazySingleton getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new LazySingleton();

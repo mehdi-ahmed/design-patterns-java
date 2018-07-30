@@ -5,7 +5,7 @@ package Singleton.enumexample;
  * Classic approach :
  * A private constructor
  * A static field containing its only instance
- * A static factory method for obtaining the instance
+ * A static factory methodfactory for obtaining the instance
  */
 
 

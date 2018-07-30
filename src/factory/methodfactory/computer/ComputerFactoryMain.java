@@ -1,4 +1,4 @@
-package factory.computer;
+package factory.methodfactory.computer;
 
 public class ComputerFactoryMain {
 

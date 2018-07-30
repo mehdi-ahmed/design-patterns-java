@@ -157,3 +157,10 @@
    or even a default implementation of the Factory Method that returns a default instance of Product . 
    From this interface, a set of ConcreteCreator classes are created that return desired 
    ConcreteProduct instances that implement the Product interface.     
+   
+   - Factory example https://dzone.com/articles/java-the-factory-pattern
+   
+   - we will create an encryption mechanism that allows for the user to supply a string of text and a file name, 
+   which is then encrypted and written to disk. Since there are various encryption algorithms that may be desired 
+   in a variety of scenarios, we will use the Factory 
+   Method pattern to allow for multiple encryption implementations to be created

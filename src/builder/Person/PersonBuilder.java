@@ -24,9 +24,9 @@ public class PersonBuilder {
     public boolean isHomeOwner;
 
     /**
-     * ‘with’ method takes a function of type Consumer. Consumer is a functional interface provided by Java 8,
+     * ‘with’ methodfactory takes a function of type Consumer. Consumer is a functional interface provided by Java 8,
      * which takes single argument and returns no result. In this case it accepts an object of type person builder
-     * which is passed to accept method. Which means that the instance of the builder would be accessible
+     * which is passed to accept methodfactory. Which means that the instance of the builder would be accessible
      * in the lambda expression and we can do whatever we want.
      * @param builderFunction
      * @return
